@@ -1,9 +1,12 @@
-﻿namespace Lesson4
+﻿using System.Runtime.Serialization.Formatters;
+
+namespace Lesson4
 {
     internal class Program
     {
         static void Main(string[] args)
         {
+            // *** Main ***
             Console.WriteLine("\n*** Declaration of two randomaly constants (X and Y) and will count the sum of all numbers between ***\n");
 
             Random random = new Random();
@@ -22,6 +25,7 @@
             }
             else Console.WriteLine("x equals y " + x);
 
+            // *** Extr ***
             Console.WriteLine("\n*** Extr ***");
 
             bool parseResult1;
@@ -53,6 +57,27 @@
             }
             else Console.WriteLine("x equals y " + x1);
 
+            // ***Super Extr #1 ***
+            Console.WriteLine("\n*** Super Extr #1 ***\n");
+
+            int x2 = 7;
+            int y2 = 5;
+            Console.WriteLine($"variables x = {x2} \nvariables y = {y2}");
+
+            x2 = x2 + y2;
+            y2 = x2 - y2;
+            x2 = x2 - y2;
+            Console.WriteLine("result x = "+x2+" y = "+y2);
+
+            // "костыль" :))
+            int x3 = 7;
+            int y3 = 12;
+            Console.WriteLine($"\nvariables x = {x3} \nvariables y = {y3}");
+            if (x3 <= y3) x3++;
+            Console.WriteLine($"result1: x = {y3} y = {y3 = x3} ");
+
+
         }
     }
 }
+
